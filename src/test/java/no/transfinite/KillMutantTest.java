@@ -20,11 +20,11 @@ public class KillMutantTest {
     @Parameters
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
-                {0, 1, 0}, {2, 1, 1}, {2, 1, 1}, {1, 2, 1}, {0, 1, 0}, {0, 0, 0}
+                {2, 1, true}
         });
     }
 
-    public KillMutantTest(int input1, int input2, int expected) {
+    public KillMutantTest(int input1, int input2, boolean expected) {
         this.input1 = input1;
         this.input2 = input2;
         this.expected = expected;
@@ -32,9 +32,13 @@ public class KillMutantTest {
 
     @org.junit.Test
     public void min() throws Exception {
-        assertEquals(this.expected, cl.min(input1, input2));
+        //assertEquals(this.expected, cl.min(input1, input2));
+        assertEquals(this.expected, cl.aIsGreaterThanB(input1, input2));
     }
 
-    private int input1, input2, expected;
+    private int input1;
+    private int input2;
+    private boolean expected;
+
     Calculate cl = new Calculate();
 }

@@ -8,6 +8,7 @@ import java.util.Arrays;
 import java.util.Collection;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 /**
  * Created by ronnyma on 05/02/2017.
@@ -27,6 +28,11 @@ public class CalculateTest {
     @org.junit.Test
     public void subtract() throws Exception {
         assertEquals(7, cl.subtract(18, 11));
+    }
+
+    @org.junit.Test
+    public void aIsGreaterThanb() throws Exception {
+        assertTrue(true);
     }
 
 
