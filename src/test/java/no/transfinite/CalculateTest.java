@@ -35,7 +35,11 @@ public class CalculateTest {
         assertTrue(true);
     }
 
-
+    @org.junit.Test
+    public void min() throws Exception {
+        assertEquals(5, cl.min(5,6));
+    }
+    
     Calculate cl;
 }
 
