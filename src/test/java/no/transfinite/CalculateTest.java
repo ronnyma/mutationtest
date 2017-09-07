@@ -15,27 +15,30 @@ import static org.junit.Assert.assertTrue;
  */
 public class CalculateTest {
     @org.junit.Before
-    public void setUp() throws Exception {
+    public void setUp() {
         cl = new Calculate();
     }
 
-
     @org.junit.Test
-    public void add() throws Exception {
+    public void add() {
         assertEquals(16, cl.add(7, 9));
     }
 
     @org.junit.Test
-    public void subtract() throws Exception {
+    public void subtract() {
         assertEquals(7, cl.subtract(18, 11));
     }
 
     @org.junit.Test
-    public void aIsGreaterThanb() throws Exception {
+    public void min() {
+        assertEquals(5, cl.min(5,6));
+    }
+
+    @org.junit.Test
+    public void aIsGreaterThanb() {
         assertTrue(true);
     }
 
-
-    Calculate cl;
+    private Calculate cl;
 }
 
