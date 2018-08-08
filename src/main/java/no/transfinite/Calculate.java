@@ -32,6 +32,6 @@ public class Calculate {
         else
             return false;
     }
-
+    private int identity;
 }
 
