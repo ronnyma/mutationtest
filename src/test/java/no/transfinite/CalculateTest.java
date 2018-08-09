@@ -31,15 +31,15 @@ public class CalculateTest {
     }
 
     @org.junit.Test
+    public void min() throws Exception {
+        assertEquals(5, cl.min(5,6));
+    }
+
+    @org.junit.Test
     public void aIsGreaterThanb() throws Exception {
         assertTrue(true);
     }
 
-    @org.junit.Test
-    public void min() throws Exception {
-        assertEquals(5, cl.min(5,6));
-    }
-    
     Calculate cl;
 }
 

@@ -22,7 +22,7 @@ public class TimeOfDayTest {
     //0 midnight to 6 am is night
         DateTime time = new DateTime(2017,9,8,0,0);
 
-        assertEquals("Night", tod.getTimeOfDay(time));
+        assertEquals("Night", TimeOfDay.getTimeOfDay(time));
 
 
     }
@@ -32,7 +32,7 @@ public class TimeOfDayTest {
         //6 am to 12 pm is morning
         DateTime time = new DateTime(2017,9,8,7,0);
 
-        assertEquals("Morning", tod.getTimeOfDay(time));
+        assertEquals("Morning", TimeOfDay.getTimeOfDay(time));
     }
 
     @Test
@@ -40,21 +40,21 @@ public class TimeOfDayTest {
         //12 pm to 17 pm is mid day
         DateTime time = new DateTime(2017,9,8,14,0);
 
-        assertEquals("Mid day", tod.getTimeOfDay(time));
+        assertEquals("Mid day", TimeOfDay.getTimeOfDay(time));
     }
     @Test
     public void getTimeOfDay4() throws Exception {
         //17 pm to 22 pm is afternoon
         DateTime time = new DateTime(2017,9,8,19,0);
 
-        assertEquals("Afternoon", tod.getTimeOfDay(time));
+        assertEquals("Afternoon", TimeOfDay.getTimeOfDay(time));
     }
     @Test
     public void getTimeOfDay5() throws Exception {
         //After 22 to 00 am is evening
         DateTime time = new DateTime(2017,9,8,22,0);
 
-        assertEquals("Evening", tod.getTimeOfDay(time));
+        assertEquals("Evening", TimeOfDay.getTimeOfDay(time));
     }
     private TimeOfDay tod;
 }
